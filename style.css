@@ -176,6 +176,7 @@ h1{
   display:flex;
   flex-wrap:wrap;
   gap:12px;
+  margin-bottom: 18px;
 }
 
 /* Buttons */
@@ -290,6 +291,7 @@ h1{
   display:flex;
   flex-wrap:wrap;
   gap:10px;
+  margin-top: 4px;
 }
 
 .badge{
