@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Curățare cu gheață carbonică pentru motoare | Carbon Ice Garrage</title>
+  <meta name="description" content="Curățare profesională cu gheață carbonică pentru motoare și componente auto & moto premium. Metodă neabrazivă, fără reziduuri, controlată și sigură." />
+
+  <meta property="og:title" content="Curățare cu gheață carbonică | Carbon Ice Garrage" />
+  <meta property="og:description" content="Curățare neabrazivă, fără reziduuri, pentru motoare și componente premium." />
+  <meta property="og:type" content="website" />
+
+  <!-- Modular CSS (no frameworks) -->
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="layout.css" />
+  <link rel="stylesheet" href="components.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+
+<body>
+  <!-- Sticky top bar -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#hero" aria-label="Mergi la început">
+        <div class="logo" aria-hidden="true"></div>
+        <span>Carbon Ice Garrage</span>
+      </a>
+
+      <!-- Desktop nav (hash today, ready for multi-page tomorrow via data-route) -->
+      <nav class="nav" aria-label="Navigație">
+        <a href="#beneficii" data-route="/servicii">Beneficii</a>
+        <a href="#proces" data-route="/tehnologie">Proces</a>
+        <a href="#aplicatii" data-route="/servicii">Aplicații</a>
+        <a href="#galerie" data-route="/galerie">Galerie</a>
+        <a href="#diferente" data-route="/tehnologie">Diferențe</a>
+        <a href="#faq" data-route="/faq">FAQ</a>
+        <a href="#contact" data-route="/contact">Contact</a>
+      </nav>
+
+      <div class="lang" aria-label="Limba">
+        <a href="index.html" aria-current="page">RO</a>
+        <a href="en.html">EN</a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="menuBtn" class="menu-btn" type="button" aria-label="Deschide meniul">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu drawer -->
+  <div id="mobileMenu" class="mobile-menu" aria-hidden="true" role="dialog" aria-label="Meniu">
+    <div class="mobile-panel">
+      <div class="row">
+        <div class="brand" aria-hidden="true">
+          <div class="logo"></div>
+          <span>Carbon Ice Garrage</span>
+        </div>
+        <button id="closeMenuBtn" class="close-btn" type="button" aria-label="Închide meniul">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="mobile-links" aria-label="Navigație (mobil)">
+        <a href="#beneficii" data-route="/servicii">Beneficii</a>
+        <a href="#proces" data-route="/tehnologie">Proces</a>
+        <a href="#aplicatii" data-route="/servicii">Aplicații</a>
+        <a href="#galerie" data-route="/galerie">Galerie</a>
+        <a href="#diferente" data-route="/tehnologie">Diferențe</a>
+        <a href="#faq" data-route="/faq">FAQ</a>
+        <a href="#contact" data-route="/contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ======================================================
+       HERO
+       ====================================================== -->
+  <main id="hero" class="hero">
+    <div class="container hero-grid">
+      <section class="card hero-main" aria-label="Prezentare">
+        <p class="kicker">Modern Automotive Studio • Light Tech • Rezultate premium</p>
+        <h1>Curățare cu gheață carbonică pentru motoare & componente premium</h1>
+        <p class="sub">
+          Metodă neabrazivă, fără apă și fără reziduuri de abraziv. Ideală când vrei un compartiment motor curat “ca la atelier premium”
+          — cu procedură controlată, mascare și atenție la detaliu.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact" data-route="/contact">Cere ofertă</a>
+          <a class="btn btn-ghost" href="https://www.tiktok.com/@carbonicegarage" target="_blank" rel="noopener">Vezi rezultatele noastre pe TikTok</a>
+        </div>
+
+        <div class="badges" aria-label="Beneficii cheie" style="margin-top:14px;">
+          <div class="badge">Neabraziv</div>
+          <div class="badge">Fără apă</div>
+          <div class="badge">Fără “nisip”</div>
+          <div class="badge">Precizie & control</div>
+        </div>
+
+        <div class="hero-media" aria-label="Placeholder galerie (poze reale pot fi adăugate ulterior)">
+          <div class="media-label">
+            <span class="dot" aria-hidden="true"></span>
+            <div>
+              <strong>Before / After</strong>
+              <span class="small-muted">.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="card hero-side" aria-label="De ce funcționează">
+        <div class="pill">
+          <div aria-hidden="true">🧊</div>
+          <div>
+            <strong>Ce este gheața carbonică?</strong>
+            <span>CO₂ solid care sublimează (trece direct în gaz) — fără murdărie secundară de tip abraziv.</span>
+          </div>
+        </div>
+
+        <div class="pill">
+          <div aria-hidden="true">🛡️</div>
+          <div>
+            <strong>Potrivită pentru piese scumpe</strong>
+            <span>Curățare delicată pentru suprafețe sensibile (cu protecție și mascare corectă).</span>
+          </div>
+        </div>
+
+        <div class="pill">
+          <div aria-hidden="true">⚙️</div>
+          <div>
+            <strong>Rezultat “atelier premium”</strong>
+            <span>Finisaj curat, fără solvenți lipicioși sau reziduuri care rețin murdăria.</span>
+          </div>
+        </div>
+
+        <div class="small-muted">
+          * Orice lucrare începe cu inspecție. Metoda e puternică, dar trebuie aplicată corect pentru fiecare componentă.
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ======================================================
+       BENEFICII
+       ====================================================== -->
+  <section id="beneficii" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Beneficii</div>
+        <h2>Curățare “light tech”: eficientă, controlată, fără compromisuri</h2>
+        <p>Concepută pentru proiecte auto & moto unde vrei rezultate premium și risc minim pentru componente sensibile.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="feature panel">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M7 14l-2 2m14-8l-2 2M6 8l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Neabraziv</h3>
+          <p>Nu sablăm cu nisip. Pentru multe aplicații, riscul de a “mătui” sau zgâria suprafețe e mult mai mic.</p>
+        </div>
+
+        <div class="feature panel">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Fără apă</h3>
+          <p>Util când vrei să minimizezi umezeala în zone cu conectori, cablaje, senzori sau zone greu de uscat.</p>
+        </div>
+
+        <div class="feature panel">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M4 12c3-7 13-7 16 0-3 7-13 7-16 0z" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 9.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Precizie</h3>
+          <p>Se lucrează controlat (presiune / distanță / mascare). Ideal pentru detaliu, nu doar “spălat la grămadă”.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       PROCES
+       ====================================================== -->
+  <section id="proces" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Proces</div>
+        <h2>Procedură clară, de la inspecție la verificare finală</h2>
+        <p>Îți explicăm exact ce facem, ce protejăm și de ce.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="n">1</div>
+          <div>
+            <strong>Inspecție</strong>
+            <span>Evaluăm depunerile, accesul, riscurile și stabilim abordarea potrivită pentru piesele tale.</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="n">2</div>
+          <div>
+            <strong>Mascare & protecție</strong>
+            <span>Protejăm zonele sensibile și delimităm suprafețele de lucru (conectori, elemente expuse, finisaje).</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="n">3</div>
+          <div>
+            <strong>Curățare controlată</strong>
+            <span>Aplicăm gheața carbonică cu parametri potriviți pentru componentă și nivelul depunerilor.</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="n">4</div>
+          <div>
+            <strong>Verificare finală</strong>
+            <span>Inspecție finală + recomandări de întreținere / pași următori (în funcție de proiect).</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       APLICATII
+       ====================================================== -->
+  <section id="aplicatii" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Aplicații</div>
+        <h2>Ce curățăm (și ce NU curățăm) — clar, fără surprize</h2>
+      </div>
+
+      <div id="appsAccordion" class="accordion apps-accordion" aria-label="Aplicații (accordion)">
+        <div class="acc-item" aria-expanded="true">
+          <button class="acc-button" type="button">
+            <span class="meta">✅ Ce curățăm frecvent</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-content">
+              <ul>
+                <li>Compartiment motor (depuneri, ulei, murdărie persistentă) — cu mascare corectă</li>
+                <li>Componente metalice: capace, suporturi, carcase, zone cu depuneri “coapte”</li>
+                <li>Zone greu accesibile unde spălarea clasică nu ajunge eficient</li>
+                <li>Piese moto premium & proiecte speciale (curățare de precizie)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item" aria-expanded="false">
+          <button class="acc-button" type="button">
+            <span class="meta">⚠️ Ce tratăm doar după inspecție</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-content">
+              <ul>
+                <li>Zone cu cablaje/conectori expuși (se decide mascare + parametri)</li>
+                <li>Suprafețe cu finisaje sensibile sau vopsele speciale</li>
+                <li>Componente cu risc de reținere a depunerilor sub garnituri / îmbinări</li>
+              </ul>
+              <p class="small-muted" style="margin-top:10px;">Decizia finală se ia după inspecție, în funcție de configurația reală a motorului/piesei.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item" aria-expanded="false">
+          <button class="acc-button" type="button">
+            <span class="meta">⛔ Ce NU facem (sau recomandăm altă metodă)</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-content">
+              <ul>
+                <li>Intervenții fără protecție/mascare acolo unde există risc clar pentru componente sensibile</li>
+                <li>“Curățări rapide” care sacrifică siguranța pentru viteză</li>
+                <li>Promisiuni “universal safe” — fiecare proiect e diferit</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-3" style="margin-top:16px;">
+        <div class="panel">
+          <h3 style="margin:0 0 6px;">Motoare & compartiment motor</h3>
+          <p>Depuneri, ulei, murdărie industrială — cu procedură controlată și protecție.</p>
+        </div>
+        <div class="panel">
+          <h3 style="margin:0 0 6px;">Componente & piese</h3>
+          <p>Capace, carcase, suporturi, piese metalice și zone cu depuneri persistente.</p>
+        </div>
+        <div class="panel">
+          <h3 style="margin:0 0 6px;">Moto & proiecte speciale</h3>
+          <p>Curățare de precizie pentru piese premium și proiecte high-end.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       GALERIE
+       ====================================================== -->
+  <section id="galerie" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Galerie</div>
+        <h2>Before / After</h2>
+        <p>Exemple de rezultate obținute în lucrările noastre.</p>
+      </div>
+
+      <div class="gallery">
+        <div class="thumb">
+          <div class="ph" aria-hidden="true"></div>
+          <div class="cap">Motor / compartiment motor — curățare controlată</div>
+        </div>
+        <div class="thumb">
+          <div class="ph" aria-hidden="true"></div>
+          <div class="cap">Componente metalice — depuneri îndepărtate</div>
+        </div>
+        <div class="thumb">
+          <div class="ph" aria-hidden="true"></div>
+          <div class="cap">Piese moto premium — curățare de precizie</div>
+        </div>
+      </div>
+
+      <div class="panel" style="margin-top:14px;">
+        <h3 style="margin:0 0 8px;">Din TikTok</h3>
+        <p style="margin:0 0 10px;">
+          Urmărește lucrările și rezultatele noastre pe TikTok:
+          <a href="https://www.tiktok.com/@carbonicegarage" target="_blank" rel="noopener">@carbonicegarage</a>
+        </p>
+        <div class="small-muted">3–6 thumbnail-uri.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       DIFERENTE
+       ====================================================== -->
+  <section id="diferente" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Diferențe</div>
+        <h2>De ce gheața carbonică e altceva decât “sablare” sau “spălare”</h2>
+        <p>Pe scurt: mai puțină umezeală, mai puține reziduuri, control mai bun — când e aplicată corect.</p>
+      </div>
+
+      <div class="compare" aria-label="Comparație metode">
+        <div class="panel">
+          <h3>Dry ice blasting</h3>
+          <ul>
+            <li>Neabraziv (în multe aplicații auto)</li>
+            <li>Fără apă</li>
+            <li>Fără reziduuri de “nisip”</li>
+            <li>Control fin pe zone și parametri</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Spălare clasică</h3>
+          <ul>
+            <li>Poate implica umezeală în zone sensibile</li>
+            <li>Poate lăsa solvenți/reziduuri</li>
+            <li>Uneori slabă pe depuneri “coapte”</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Sablare / abraziv</h3>
+          <ul>
+            <li>Risc mai mare de abraziune pe finisaje</li>
+            <li>Reziduuri abrazive greu de eliminat</li>
+            <li>Nu e potrivită pentru multe zone din compartimentul motor</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel" style="margin-top:14px;">
+        <h3 style="margin:0 0 6px;">Important</h3>
+        <p style="margin:0;">
+          Alegem metoda în funcție de proiect. Dacă “dry ice” nu e potrivit pentru o zonă, îți spunem direct și propunem alternativă.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       CONTACT
+       ====================================================== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Contact</div>
+        <h2>Cere ofertă / programează o inspecție</h2>
+        <p>Trimite detalii despre proiect (tip motor / piese, nivel depuneri, poze/video). Revenim cu o estimare realistă.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="panel">
+          <h3 style="margin:0 0 10px;">Date de contact</h3>
+          <p style="margin:0 0 8px;"><strong>Oraș:</strong> București</p>
+          <p style="margin:0 0 8px;"><strong>Email:</strong> <a href="mailto:contact@web.ro">contact @ web.ro</a></p>
+          <p style="margin:0 0 8px;"><strong>Telefon:</strong> <a href="tel:+40734165759">0734.165.759</a></p>
+
+          <div class="cta-row" style="margin-top:12px;">
+            <a class="btn btn-primary" href="https://wa.me/40734165759?text=Salut!%20Vreau%20o%20ofert%C4%83%20pentru%20cur%C4%83%C8%9Bare%20cu%20ghea%C8%9B%C4%83%20carbonic%C4%83.%20Ata%C8%99ez%20poze%20%C8%99i%20detalii." target="_blank" rel="noopener">
+              Scrie-ne pe WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="https://www.tiktok.com/@carbonicegarage" target="_blank" rel="noopener">TikTok</a>
+          </div>
+
+          <p class="small-muted" style="margin-top:10px;">
+            Tip: pentru ofertare rapidă, trimite 2–3 poze + un video scurt (dacă ai).
+          </p>
+        </div>
+
+        <div class="panel map-wrap">
+          <h3 style="margin:0 0 10px;">Locație</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1425.1409445404167!2d26.122356863444065!3d44.40686099296682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1fef709a20ce5%3A0x7a809765e84a3b2b!2sAmanet%20Auto%20Andy%20Popescu!5e0!3m2!1sen!2sro!4v1766094596598!5m2!1sen!2sro"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Harta locației Carbon Ice Garrage"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FAQ
+       ====================================================== -->
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">FAQ</div>
+        <h2>Întrebări frecvente</h2>
+        <p>Răspunsuri scurte, clare. Dacă ai un caz special, trimite poze și îți spunem exact ce e potrivit.</p>
+      </div>
+
+      <div id="faqAccordion" class="accordion" aria-label="FAQ (accordion)">
+        <div class="acc-item" aria-expanded="true">
+          <button class="acc-button" type="button">
+            <span class="meta">Este metoda sigură pentru motoare și componente scumpe?</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-content">
+              Da, atunci când este aplicată corect: cu inspecție, mascare/protecție și parametri potriviți. Nu există o soluție universală — evaluarea inițială decide procedura.
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item" aria-expanded="false">
+          <button class="acc-button" type="button">
+            <span class="meta">Rămâne mizerie după curățare?</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-content">
+              Un avantaj major este că gheața carbonică sublimează (nu lasă “nisip”). Reziduurile rămase sunt în principal depunerile desprinse, care se colectează în timpul lucrării.
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item" aria-expanded="false">
+          <button class="acc-button" type="button">
+            <span class="meta">Se folosește apă?</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-content">
+              Nu. Procesul nu este spălare cu apă. Acest lucru e util când se urmărește minimizarea umezelii în zone sensibile.
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item" aria-expanded="false">
+          <button class="acc-button" type="button">
+            <span class="meta">Trebuie demontat motorul?</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-content">
+              Nu neapărat. Depinde de acces, tipul depunerilor și nivelul de detaliu dorit. În multe cazuri se poate lucra fără demontare completă, dar decizia se ia după inspecție.
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item" aria-expanded="false">
+          <button class="acc-button" type="button">
+            <span class="meta">Cât durează și cât costă?</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-content">
+              Durata și costul depind de suprafață, acces, nivelul depunerilor și cerințele de protecție. Trimite 2–3 poze / un video și îți oferim o estimare realistă.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="y">2026</span> Carbon Ice Garrage • Curățare cu gheață carbonică (dry ice blasting)
+    </div>
+  </footer>
+
+  <!-- Sticky bottom CTA (mobile-first) -->
+  <div class="bottom-cta" role="region" aria-label="Acțiune rapidă (mobil)">
+    <div class="bottom-cta-inner">
+      <a class="btn btn-primary" href="tel:+40734165759">Sună acum</a>
+      <a class="btn btn-ghost" href="#contact" data-route="/contact">Cere ofertă</a>
+    </div>
+  </div>
+
+  <!-- WhatsApp floating button -->
+  <a class="whatsapp-float"
+     href="https://wa.me/40734165759?text=Salut!%20Vreau%20o%20ofert%C4%83%20pentru%20cur%C4%83%C8%9Bare%20cu%20ghea%C8%9B%C4%83%20carbonic%C4%83."
+     target="_blank" rel="noopener"
+     aria-label="Deschide WhatsApp">
+    <span>WhatsApp</span>
+  </a>
+
+  <script src="ui.js"></script>
+</body>
+</html>

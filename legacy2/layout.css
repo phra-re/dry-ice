@@ -1,0 +1,50 @@
+/* ==========================================================
+   layout.css
+   - Page-level layout primitives
+   ========================================================== */
+
+.container{
+  width: min(var(--container), calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.section{
+  padding: 52px 0;
+}
+
+.section-head{
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.section-head .eyebrow{
+  font: 600 .78rem/1 var(--font);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(11,18,32,.62);
+}
+
+.grid{
+  display: grid;
+  gap: 16px;
+}
+
+.grid-2{
+  display: grid;
+  gap: 16px;
+}
+
+.grid-3{
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 860px){
+  .section{ padding: 76px 0; }
+  .grid-2{ grid-template-columns: 1.1fr .9fr; align-items: start; }
+  .grid-3{ grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Anchor offset for sticky header */
+[id]{ scroll-margin-top: calc(var(--header-h) + 18px); }
