@@ -11,7 +11,6 @@
   <meta property="og:description" content="Non-abrasive, residue-free dry ice blasting for engines and premium components." />
   <meta property="og:type" content="website" />
 
-  <!-- Modular CSS -->
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/components.css" />
@@ -19,7 +18,6 @@
 </head>
 
 <body>
-  <!-- Sticky top bar -->
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="brand" href="#hero" aria-label="Go to top">
@@ -43,29 +41,28 @@
       </div>
 
       <button id="menuBtn" class="menu-btn" type="button" aria-label="Open menu">
-        <svg viewBox="0 0 24 24" fill="none">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
       </button>
     </div>
   </header>
 
-  <!-- Mobile menu -->
-  <div id="mobileMenu" class="mobile-menu" aria-hidden="true" role="dialog">
+  <div id="mobileMenu" class="mobile-menu" aria-hidden="true" role="dialog" aria-label="Menu">
     <div class="mobile-panel">
       <div class="row">
-        <div class="brand">
+        <div class="brand" aria-hidden="true">
           <div class="logo"></div>
           <span>Carbon Ice Garage</span>
         </div>
         <button id="closeMenuBtn" class="close-btn" type="button" aria-label="Close menu">
-          <svg viewBox="0 0 24 24" fill="none">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </button>
       </div>
 
-      <nav class="mobile-links">
+      <nav class="mobile-links" aria-label="Navigation (mobile)">
         <a href="#beneficii" data-route="/services">Benefits</a>
         <a href="#proces" data-route="/technology">Process</a>
         <a href="#aplicatii" data-route="/services">Applications</a>
@@ -77,226 +74,434 @@
     </div>
   </div>
 
-  <!-- HERO -->
   <main id="hero" class="hero">
     <div class="container hero-grid">
-      <section class="card hero-main">
-        <p class="kicker">Modern Automotive Studio • Light Tech • Premium Results</p>
+      <section class="card hero-main" aria-label="Overview">
+        <p class="kicker">Modern Automotive Studio • Dark Tech • Premium Results</p>
         <h1>Dry Ice Cleaning for Engines & Premium Components</h1>
         <p class="sub">
-          A non-abrasive, water-free cleaning method with no secondary residue.
-          Ideal when you want a truly premium engine bay finish — with full control and proper protection.
+          A non-abrasive, water-free method with no secondary abrasive residue. Ideal when you want a premium engine bay finish
+          — delivered through a controlled process, masking, and attention to detail.
         </p>
 
         <div class="cta-row">
-          <a class="btn btn-primary" href="#contact">Request a Quote</a>
-          <a class="btn btn-ghost" href="https://www.tiktok.com/@carbonicegarage" target="_blank" rel="noopener">
-            See Real Jobs on TikTok
-          </a>
+          <a class="btn btn-primary" href="#contact" data-route="/contact">Request a Quote</a>
+          <a class="btn btn-ghost" href="https://www.tiktok.com/@carbonicegarage" target="_blank" rel="noopener">See real jobs on TikTok</a>
         </div>
 
-        <div class="badges" style="margin-top:14px;">
+        <div class="badges" aria-label="Key benefits" style="margin-top:14px;">
           <div class="badge">Non-abrasive</div>
           <div class="badge">No water</div>
-          <div class="badge">No sand residue</div>
-          <div class="badge">Controlled process</div>
+          <div class="badge">No “sand” residue</div>
+          <div class="badge">Precision & control</div>
         </div>
 
-        <div class="hero-media">
+        <div class="hero-media" aria-label="Gallery placeholder (real photos can be added later)">
           <div class="media-label">
-            <span class="dot"></span>
+            <span class="dot" aria-hidden="true"></span>
             <div>
               <strong>Before / After</strong>
-              <span class="small-muted">Replace with real photos anytime — layout stays intact.</span>
+              <span class="small-muted">Swap in real photos anytime — layout stays intact.</span>
             </div>
           </div>
         </div>
       </section>
 
-      <aside class="card hero-side">
+      <aside class="card hero-side" aria-label="Why it works">
         <div class="pill">
-          <div>🧊</div>
+          <div aria-hidden="true">🧊</div>
           <div>
-            <strong>What is dry ice blasting?</strong>
-            <span>Solid CO₂ that sublimates on impact — no abrasive residue left behind.</span>
+            <strong>What is dry ice?</strong>
+            <span>Solid CO₂ that sublimates (turns directly into gas) — no abrasive media left behind.</span>
           </div>
         </div>
 
         <div class="pill">
-          <div>🛡️</div>
+          <div aria-hidden="true">🛡️</div>
           <div>
-            <strong>Safe for premium parts</strong>
-            <span>Suitable for sensitive components when proper masking and parameters are used.</span>
+            <strong>Suitable for premium parts</strong>
+            <span>Gentle cleaning for sensitive surfaces (with correct masking and parameters).</span>
           </div>
         </div>
 
         <div class="pill">
-          <div>⚙️</div>
+          <div aria-hidden="true">⚙️</div>
           <div>
-            <strong>Workshop-grade finish</strong>
-            <span>Clean surfaces without greasy solvents or trapped contaminants.</span>
+            <strong>Premium workshop finish</strong>
+            <span>Clean surfaces without sticky solvents or residues that attract dirt.</span>
           </div>
         </div>
 
         <div class="small-muted">
-          * Every job starts with an inspection. Dry ice is powerful, but must be applied correctly.
+          * Every job starts with an inspection. The method is powerful, but must be applied correctly for each component.
         </div>
       </aside>
     </div>
   </main>
 
-  <!-- BENEFITS -->
   <section id="beneficii" class="section">
     <div class="container">
       <div class="section-head">
         <div class="eyebrow">Benefits</div>
-        <h2>Light-tech cleaning without compromise</h2>
-        <p>Designed for automotive and motorcycle projects where precision and safety matter.</p>
+        <h2>Dark-tech cleaning: effective, controlled, no compromises</h2>
+        <p>Built for automotive & motorcycle projects where premium results and low risk matter.</p>
       </div>
 
       <div class="grid-3">
         <div class="feature panel">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M7 14l-2 2m14-8l-2 2M6 8l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
           <h3>Non-abrasive</h3>
-          <p>No sand or harsh media. Reduced risk of surface damage on sensitive parts.</p>
+          <p>No sand blasting. For many applications, risk of marring or scratching is significantly reduced.</p>
         </div>
+
         <div class="feature panel">
-          <h3>Water-free</h3>
-          <p>No moisture in connectors, wiring, or hard-to-dry areas.</p>
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>No water</h3>
+          <p>Useful when you want to minimize moisture around connectors, wiring, sensors, or hard-to-dry areas.</p>
         </div>
+
         <div class="feature panel">
-          <h3>High precision</h3>
-          <p>Pressure, distance and masking are adjusted per component.</p>
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M4 12c3-7 13-7 16 0-3 7-13 7-16 0z" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 9.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Precision</h3>
+          <p>Controlled parameters (pressure / distance / masking). Great for detail work, not “quick washing”.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROCESS -->
   <section id="proces" class="section">
     <div class="container">
       <div class="section-head">
         <div class="eyebrow">Process</div>
-        <h2>A clear, controlled workflow</h2>
-        <p>No guesswork — every step is explained.</p>
+        <h2>A clear workflow: inspection → protection → clean → final check</h2>
+        <p>We explain exactly what we do, what we protect, and why.</p>
       </div>
 
       <div class="steps">
-        <div class="step"><div class="n">1</div><div><strong>Inspection</strong><span>We assess deposits, access and risks.</span></div></div>
-        <div class="step"><div class="n">2</div><div><strong>Masking</strong><span>Sensitive areas are protected.</span></div></div>
-        <div class="step"><div class="n">3</div><div><strong>Dry ice cleaning</strong><span>Controlled blasting with correct parameters.</span></div></div>
-        <div class="step"><div class="n">4</div><div><strong>Final check</strong><span>Inspection and recommendations.</span></div></div>
+        <div class="step">
+          <div class="n">1</div>
+          <div>
+            <strong>Inspection</strong>
+            <span>We assess deposits, access, risks, and choose the right approach for your parts.</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="n">2</div>
+          <div>
+            <strong>Masking & protection</strong>
+            <span>We protect sensitive areas and define the working surfaces (connectors, exposed elements, finishes).</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="n">3</div>
+          <div>
+            <strong>Controlled cleaning</strong>
+            <span>Dry ice blasting with parameters matched to the component and deposit level.</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="n">4</div>
+          <div>
+            <strong>Final check</strong>
+            <span>Final inspection + recommendations (depending on the project).</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- APPLICATIONS -->
   <section id="aplicatii" class="section">
     <div class="container">
       <div class="section-head">
         <div class="eyebrow">Applications</div>
-        <h2>What we clean — and what we don’t</h2>
-        <p>Transparent and honest, from the start.</p>
+        <h2>What we clean (and what we don’t) — clearly stated</h2>
+        <p>On mobile it’s an accordion. On desktop it stays open for quick scanning.</p>
       </div>
 
-      <div id="appsAccordion" class="accordion apps-accordion">
+      <div id="appsAccordion" class="accordion apps-accordion" aria-label="Applications (accordion)">
         <div class="acc-item" aria-expanded="true">
-          <button class="acc-button"><span class="meta">✅ Common applications</span></button>
-          <div class="acc-panel"><div class="acc-content">
-            <ul>
-              <li>Engine bays (oil, grease, baked-on deposits)</li>
-              <li>Metal components and brackets</li>
-              <li>Hard-to-reach areas</li>
-              <li>Motorcycle engines and premium parts</li>
-            </ul>
-          </div></div>
+          <button class="acc-button" type="button">
+            <span class="meta">✅ What we clean most often</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-content">
+              <ul>
+                <li>Engine bay (oil, grime, persistent deposits) — with proper masking</li>
+                <li>Metal components: covers, brackets, housings, “baked-on” deposits</li>
+                <li>Hard-to-reach areas where classic washing is ineffective</li>
+                <li>Premium motorcycle parts & special projects (precision cleaning)</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <div class="acc-item" aria-expanded="false">
-          <button class="acc-button"><span class="meta">⚠️ After inspection only</span></button>
-          <div class="acc-panel"><div class="acc-content">
-            <ul>
-              <li>Exposed wiring and connectors</li>
-              <li>Sensitive coatings or finishes</li>
-            </ul>
-          </div></div>
+          <button class="acc-button" type="button">
+            <span class="meta">⚠️ After inspection only</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-content">
+              <ul>
+                <li>Areas with exposed wiring/connectors (masking + parameters decision)</li>
+                <li>Sensitive paint/coatings or special finishes</li>
+                <li>Areas where deposits may sit under gaskets / joints</li>
+              </ul>
+              <p class="small-muted" style="margin-top:10px;">Final decision is made after inspection, depending on the real configuration of the engine/part.</p>
+            </div>
+          </div>
         </div>
 
         <div class="acc-item" aria-expanded="false">
-          <button class="acc-button"><span class="meta">⛔ Not recommended</span></button>
-          <div class="acc-panel"><div class="acc-content">
-            <ul>
-              <li>Unprotected high-risk areas</li>
-              <li>Jobs where another method is safer</li>
-            </ul>
-          </div></div>
+          <button class="acc-button" type="button">
+            <span class="meta">⛔ Not recommended (or we suggest another method)</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-content">
+              <ul>
+                <li>Work without protection/masking in clearly high-risk areas</li>
+                <li>“Fast jobs” that sacrifice safety for speed</li>
+                <li>Universal “safe for everything” promises — each project is different</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-3" style="margin-top:16px;">
+        <div class="panel">
+          <h3 style="margin:0 0 6px;">Engines & engine bay</h3>
+          <p>Oil, grime, industrial dirt — with controlled procedure and protection.</p>
+        </div>
+        <div class="panel">
+          <h3 style="margin:0 0 6px;">Components & parts</h3>
+          <p>Covers, housings, brackets, metal parts and persistent deposits.</p>
+        </div>
+        <div class="panel">
+          <h3 style="margin:0 0 6px;">Motorcycles & special builds</h3>
+          <p>Precision cleaning for premium parts and high-end projects.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- GALLERY -->
   <section id="galerie" class="section">
     <div class="container">
       <div class="section-head">
         <div class="eyebrow">Gallery</div>
         <h2>Before / After</h2>
-        <p>Real results from real projects.</p>
+        <p>Examples from our work. (Real photos can be added later without changing the layout.)</p>
       </div>
 
       <div class="gallery">
-        <div class="thumb"><div class="ph"></div><div class="cap">Engine bay cleaning</div></div>
-        <div class="thumb"><div class="ph"></div><div class="cap">Metal components</div></div>
-        <div class="thumb"><div class="ph"></div><div class="cap">Motorcycle parts</div></div>
+        <div class="thumb">
+          <div class="ph" aria-hidden="true"></div>
+          <div class="cap">Engine bay — controlled cleaning</div>
+        </div>
+        <div class="thumb">
+          <div class="ph" aria-hidden="true"></div>
+          <div class="cap">Metal components — deposits removed</div>
+        </div>
+        <div class="thumb">
+          <div class="ph" aria-hidden="true"></div>
+          <div class="cap">Premium bike parts — precision cleaning</div>
+        </div>
+      </div>
+
+      <div class="panel" style="margin-top:14px;">
+        <h3 style="margin:0 0 8px;">From TikTok (real jobs)</h3>
+        <p style="margin:0 0 10px;">
+          Follow our work on TikTok:
+          <a href="https://www.tiktok.com/@carbonicegarage" target="_blank" rel="noopener">@carbonicegarage</a>
+        </p>
+        <div class="small-muted">Tip: you can add 3–6 local thumbnails here when ready.</div>
       </div>
     </div>
   </section>
 
-  <!-- DIFFERENCES -->
   <section id="diferente" class="section">
     <div class="container">
       <div class="section-head">
         <div class="eyebrow">Differences</div>
-        <h2>Dry ice vs traditional methods</h2>
+        <h2>Why dry ice is different from “washing” or abrasive blasting</h2>
+        <p>Less moisture, less residue, more control — when applied correctly.</p>
       </div>
 
-      <div class="compare">
-        <div class="panel"><h3>Dry ice blasting</h3><ul><li>Non-abrasive</li><li>No water</li><li>No sand residue</li></ul></div>
-        <div class="panel"><h3>Classic washing</h3><ul><li>Moisture risk</li><li>Limited on heavy deposits</li></ul></div>
-        <div class="panel"><h3>Abrasive blasting</h3><ul><li>Surface damage risk</li><li>Residue contamination</li></ul></div>
+      <div class="compare" aria-label="Method comparison">
+        <div class="panel">
+          <h3>Dry ice blasting</h3>
+          <ul>
+            <li>Non-abrasive (for many automotive applications)</li>
+            <li>No water</li>
+            <li>No “sand” residue</li>
+            <li>Fine control over areas and parameters</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Classic washing</h3>
+          <ul>
+            <li>May introduce moisture in sensitive areas</li>
+            <li>May leave solvents/residue</li>
+            <li>Sometimes weak on “baked-on” deposits</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Abrasive blasting</h3>
+          <ul>
+            <li>Higher risk of surface abrasion</li>
+            <li>Abrasive residues are hard to remove</li>
+            <li>Not suitable for many engine bay areas</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel" style="margin-top:14px;">
+        <h3 style="margin:0 0 6px;">Important</h3>
+        <p style="margin:0;">
+          We choose the method based on the project. If dry ice is not suitable for a zone, we’ll tell you and propose an alternative.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact" class="section">
     <div class="container">
       <div class="section-head">
         <div class="eyebrow">Contact</div>
-        <h2>Request a quote or inspection</h2>
+        <h2>Request a quote / book an inspection</h2>
+        <p>Send details (engine type / parts, deposit level, photos/video). We’ll reply with a realistic estimate.</p>
       </div>
 
       <div class="contact-grid">
         <div class="panel">
-          <p><strong>City:</strong> Bucharest</p>
-          <p><strong>Email:</strong> <a href="mailto:contact@web.ro">contact @ web.ro</a></p>
-          <p><strong>Phone:</strong> <a href="tel:+40734165759">+40 734 165 759</a></p>
+          <h3 style="margin:0 0 10px;">Contact details</h3>
+          <p style="margin:0 0 8px;"><strong>City:</strong> Bucharest</p>
+          <p style="margin:0 0 8px;"><strong>Email:</strong> <a href="mailto:contact@web.ro">contact @ web.ro</a></p>
+          <p style="margin:0 0 8px;"><strong>Phone:</strong> <a href="tel:+40734165759">+40 734 165 759</a></p>
+
+          <div class="cta-row" style="margin-top:12px;">
+            <a class="btn btn-primary" href="https://wa.me/40734165759?text=Hi!%20I%20would%20like%20a%20quote%20for%20dry%20ice%20cleaning.%20I%20will%20send%20photos%20and%20details." target="_blank" rel="noopener">
+              WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="https://www.tiktok.com/@carbonicegarage" target="_blank" rel="noopener">TikTok</a>
+          </div>
+
+          <p class="small-muted" style="margin-top:10px;">
+            Tip: for faster quoting, send 2–3 photos + a short video.
+          </p>
+        </div>
+
+        <div class="panel map-wrap">
+          <h3 style="margin:0 0 10px;">Location</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1425.1409445404167!2d26.122356863444065!3d44.40686099296682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1fef709a20ce5%3A0x7a809765e84a3b2b!2sAmanet%20Auto%20Andy%20Popescu!5e0!3m2!1sen!2sro!4v1766094596598!5m2!1sen!2sro"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Carbon Ice Garage location map"
+          ></iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
   <section id="faq" class="section">
     <div class="container">
       <div class="section-head">
         <div class="eyebrow">FAQ</div>
-        <h2>Frequently Asked Questions</h2>
+        <h2>Frequently asked questions</h2>
+        <p>Short, clear answers. For special cases, send photos and we’ll advise what’s best.</p>
       </div>
 
-      <div id="faqAccordion" class="accordion">
+      <div id="faqAccordion" class="accordion" aria-label="FAQ (accordion)">
         <div class="acc-item" aria-expanded="true">
-          <button class="acc-button"><span class="meta">Is dry ice cleaning safe?</span></button>
-          <div class="acc-panel"><div class="acc-content">Yes — when applied with proper inspection and protection.</div></div>
+          <button class="acc-button" type="button">
+            <span class="meta">Is the method safe for premium engines and components?</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-content">
+              Yes — when applied correctly: inspection, masking/protection, and suitable parameters. There is no universal approach; the initial assessment drives the procedure.
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item" aria-expanded="false">
+          <button class="acc-button" type="button">
+            <span class="meta">Does it leave residue?</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-content">
+              Dry ice sublimates (no abrasive “sand” residue). What remains are the loosened deposits, which are collected during the job.
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item" aria-expanded="false">
+          <button class="acc-button" type="button">
+            <span class="meta">Is water used?</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-content">
+              No. It’s not a water wash. This helps reduce moisture around sensitive areas.
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item" aria-expanded="false">
+          <button class="acc-button" type="button">
+            <span class="meta">Does the engine need to be disassembled?</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-content">
+              Not necessarily. It depends on access, deposit type, and the desired level of detail. Many jobs can be done without full disassembly, but inspection decides.
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item" aria-expanded="false">
+          <button class="acc-button" type="button">
+            <span class="meta">How long does it take and how much does it cost?</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-content">
+              Time and cost depend on size, access, deposit level, and protection requirements. Send 2–3 photos / a short video and we’ll provide a realistic estimate.
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -304,19 +509,22 @@
 
   <footer class="footer">
     <div class="container">
-      © <span id="y">2026</span> Carbon Ice Garage • Dry Ice Blasting
+      © <span id="y">2026</span> Carbon Ice Garage • Dry ice blasting
     </div>
   </footer>
 
-  <div class="bottom-cta">
+  <div class="bottom-cta" role="region" aria-label="Quick actions (mobile)">
     <div class="bottom-cta-inner">
       <a class="btn btn-primary" href="tel:+40734165759">Call now</a>
-      <a class="btn btn-ghost" href="#contact">Request quote</a>
+      <a class="btn btn-ghost" href="#contact" data-route="/contact">Request quote</a>
     </div>
   </div>
 
-  <a class="whatsapp-float" href="https://wa.me/40734165759" target="_blank" rel="noopener">
-    WhatsApp
+  <a class="whatsapp-float"
+     href="https://wa.me/40734165759?text=Hi!%20I%20would%20like%20a%20quote%20for%20dry%20ice%20cleaning."
+     target="_blank" rel="noopener"
+     aria-label="Open WhatsApp">
+    <span>WhatsApp</span>
   </a>
 
   <script src="js/ui.js"></script>

@@ -22,23 +22,12 @@
   font: 600 .78rem/1 var(--font);
   letter-spacing: .12em;
   text-transform: uppercase;
-  color: rgba(11,18,32,.62);
+  color: rgba(255,255,255,.60);
 }
 
-.grid{
-  display: grid;
-  gap: 16px;
-}
-
-.grid-2{
-  display: grid;
-  gap: 16px;
-}
-
-.grid-3{
-  display: grid;
-  gap: 16px;
-}
+.grid{ display: grid; gap: 16px; }
+.grid-2{ display: grid; gap: 16px; }
+.grid-3{ display: grid; gap: 16px; }
 
 @media (min-width: 860px){
   .section{ padding: 76px 0; }
@@ -46,5 +35,4 @@
   .grid-3{ grid-template-columns: repeat(3, 1fr); }
 }
 
-/* Anchor offset for sticky header */
 [id]{ scroll-margin-top: calc(var(--header-h) + 18px); }
