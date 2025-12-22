@@ -1010,3 +1010,58 @@ footer a:hover{
     opacity: 1;
   }
 }
+
+
+/* MOBILE NAV — hidden by default (desktop) */
+.mobile-nav {
+  display: none;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  /* ascundem meniul desktop */
+  header nav ul {
+    display: none;
+  }
+
+  /* arătăm hamburger */
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav-toggle span {
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    display: block;
+  }
+
+  /* mobile nav overlay */
+  .mobile-nav {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 12, 18, 0.96);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .mobile-nav.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+}
