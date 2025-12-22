@@ -1015,70 +1015,41 @@ footer a:hover{
 
 @media (max-width: 768px) {
 
-  .mobile-nav {
-    display: none;
-  }
-
-  body[data-menu-open="true"] .mobile-nav {
-    display: block;
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-
-    background: rgba(8, 12, 18, 0.97);
-    backdrop-filter: blur(12px);
-  }
-
   /* ascundem meniul desktop */
-  header nav ul {
-    display: none;
-  }
+  header nav ul { display: none; }
 
   /* arătăm hamburger */
-  .nav-toggle {
+  .nav-toggle{
     display: flex;
     flex-direction: column;
     gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
+    margin-left: auto;
+    z-index: 10001;
+    position: relative;
   }
 
-  .nav-toggle span {
+  .nav-toggle span{
     width: 22px;
     height: 2px;
     background: #fff;
     display: block;
   }
 
-  header nav {
-    display: flex;
-    align-items: center;
+  /* IMPORTANT: mobile nav este complet oprit când e închis */
+  .mobile-nav{
+    display: none;
   }
 
-  .nav-toggle {
-    margin-left: auto;
-    z-index: 10001;
-  }
-
-  /* mobile nav overlay */
-  .mobile-nav {
+  body[data-menu-open="true"] .mobile-nav{
     display: block;
     position: fixed;
     inset: 0;
-    background: rgba(8, 12, 18, 0.96);
-    backdrop-filter: blur(12px);
     z-index: 9999;
-
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
-
-  .mobile-nav.open {
-    opacity: 1;
-    pointer-events: auto;
-  }
+    background: rgba(8, 12, 18, 0.97);
+    backdrop-filter: blur(12px);
 
   .mobile-nav-inner {
     min-height: 100vh;
