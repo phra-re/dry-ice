@@ -1036,6 +1036,16 @@ footer a:hover{
     background: #fff;
     display: block;
   }
+  
+  header nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-toggle {
+    margin-left: auto;
+    z-index: 10001;
+  }
 
   /* mobile nav overlay */
   .mobile-nav {
