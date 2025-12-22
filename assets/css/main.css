@@ -1015,6 +1015,20 @@ footer a:hover{
 
 @media (max-width: 768px) {
 
+  .mobile-nav {
+    display: none;
+  }
+
+  body[data-menu-open="true"] .mobile-nav {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    background: rgba(8, 12, 18, 0.97);
+    backdrop-filter: blur(12px);
+  }
+
   /* ascundem meniul desktop */
   header nav ul {
     display: none;
@@ -1036,7 +1050,7 @@ footer a:hover{
     background: #fff;
     display: block;
   }
-  
+
   header nav {
     display: flex;
     align-items: center;
