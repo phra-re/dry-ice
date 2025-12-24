@@ -83,7 +83,7 @@ header{
 header nav{
   width: 100%;
   max-width: none;
-
+  pointer-events: auto;
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
@@ -143,6 +143,12 @@ header nav ul li:last-child{
   border-left: 1px solid rgba(255,255,255,.18);
 }
 
+@media (max-width: 768px) {
+  header nav ul {
+    display: none;
+  }
+}
+
 
 /* =========================================================
    HERO
@@ -162,9 +168,19 @@ header nav ul li:last-child{
   padding-right: var(--pad);
   
   position: relative;
+  z-index: 10;
   overflow: hidden;
 
-  /* LUMINĂ CONTINUĂ, FĂRĂ AXE VIZIBILE */
+  background: none; /* IMPORTANT */
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
   background:
     radial-gradient(1200px 700px at 85% 20%, rgba(154,168,255,.22), transparent 65%),
     radial-gradient(900px 600px at 15% -10%, rgba(107,228,255,.18), transparent 60%);
@@ -174,6 +190,8 @@ header nav ul li:last-child{
   max-width: var(--max);
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  z-index: 2;
 }
 
 
@@ -317,7 +335,7 @@ header nav ul li:last-child{
 
 #beneficii{
   position: relative;
-  margin-top: -120px;     /* CHEIA tranziției */
+  margin-top: 0;          /* NU mai suprapunem */
   padding-top: 96px;
   padding-bottom: 48px;
 
@@ -330,6 +348,24 @@ header nav ul li:last-child{
     );
 }
 
+#beneficii::before{
+  content:"";
+  position:absolute;
+  top:-120px;             /* AICI mutăm „tranziția” */
+  left:0;
+  right:0;
+  height:120px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7,10,15,0) 0%,
+      rgba(7,10,15,.55) 45%,
+      rgba(7,10,15,.85) 100%
+    );
+
+  pointer-events: none;   /* CRITIC */
+}
 
 #beneficii h2{
   max-width: var(--max);
@@ -427,8 +463,19 @@ header nav ul li:last-child{
   color: rgba(125,220,255,.6);
 }
 
+@media (max-width: 768px) {
+  #beneficii {
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    transform: none;
+  }
+}
+
+
 #proces{
   position: relative;
+  z-index: 10;
 
   padding-top: 48px;
   padding-bottom: 48px;
@@ -1004,53 +1051,78 @@ footer a:hover{
 }
 
 
-/* MOBILE NAV — hidden by default (desktop) */
+/* =========================
+   MOBILE NAV — PREMIUM, STABIL
+   ========================= */
+
+/* hidden by default (desktop) */
 .mobile-nav {
-  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  background: linear-gradient(
+    180deg,
+    rgba(7,10,15,0.98),
+    rgba(7,10,15,0.94)
+  );
+
+  backdrop-filter: blur(16px);
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+
+  transition:
+    opacity .22s ease,
+    transform .22s ease;
 }
 
+/* hamburger hidden on desktop */
 .nav-toggle {
   display: none;
 }
 
+/* =========================
+   MOBILE ONLY
+   ========================= */
 @media (max-width: 768px) {
 
   /* ascundem meniul desktop */
-  header nav ul { display: none; }
-
-  /* arătăm hamburger */
-  .nav-toggle{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-left: auto;
-    z-index: 10001;
-    position: relative;
-  }
-
-  .nav-toggle span{
-    width: 22px;
-    height: 2px;
-    background: #fff;
-    display: block;
-  }
-
-  /* IMPORTANT: mobile nav este complet oprit când e închis */
-  .mobile-nav{
+  header nav ul {
     display: none;
   }
 
-  body[data-menu-open="true"] .mobile-nav{
-    display: block;
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    background: rgba(8, 12, 18, 0.97);
-    backdrop-filter: blur(12px);
+  /* hamburger */
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    margin-left: auto;
+    position: relative;
+    z-index: 10001;
+  }
+
+  .nav-toggle span {
+    width: 22px;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+  }
+
+  /* menu OPEN */
+  body[data-menu-open="true"] .mobile-nav {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  /* layout interior */
   .mobile-nav-inner {
     min-height: 100vh;
     padding: 96px 24px 32px;
@@ -1060,30 +1132,70 @@ footer a:hover{
     gap: 32px;
   }
 
-  .mobile-nav a {
-    font-size: 20px;
-    color: #e6eef5;
+  /* links */
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    gap: 18px;
+  }
+
+  .mobile-nav ul li a {
+    display: block;
+
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: .2px;
+
+    color: #e9f2fa;
+    text-decoration: none;
+
+    padding: 14px 18px;
+    border-radius: 14px;
+
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.08);
+
+    transition:
+      background .18s ease,
+      border-color .18s ease,
+      transform .18s ease;
+  }
+
+  .mobile-nav ul li a:hover {
+    background: rgba(125,220,255,.10);
+    border-color: rgba(125,220,255,.35);
+    transform: translateY(-1px);
+  }
+
+  /* language switch */
+  .lang-toggle {
+    margin-top: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+
+    opacity: 0.7;
+  }
+
+  .lang-toggle span {
+    width: 1px;
+    height: 16px;
+    background: rgba(255,255,255,0.3);
+  }
+
+  .lang-toggle a {
+    font-size: 14px;
+    color: #cdd9e6;
     text-decoration: none;
   }
 
-}
-
-.mobile-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.lang-toggle {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: auto;
-  opacity: 0.7;
-}
-
-.lang-toggle span {
-  width: 1px;
-  height: 16px;
-  background: rgba(255,255,255,0.3);
+  .lang-toggle a.active {
+    color: #8fe3ff;
+    font-weight: 600;
+  }
 }

@@ -5,6 +5,7 @@
 
 (function () {
   "use strict";
+  console.log("STEP2: ui.js initialized ✅");
 
   /* -------------------------------------------------------
      Helpers
