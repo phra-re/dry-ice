@@ -17,6 +17,9 @@ body {
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+
+  /* FUNDAL NEUTRU – FĂRĂ LUMINĂ */
+  background: linear-gradient(180deg, #070a0f 0%, #0a0e15 100%);
 }
 
 img { max-width: 100%; display: block; }
@@ -43,18 +46,6 @@ a { color: inherit; text-decoration: none; }
 
   --max: 1120px;
   --pad: 24px;
-}
-
-/* --------- 2) Body background (nu negru plat) --------- */
-body{
-  margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  color: #e7edf5;
-  line-height: 1.55;
-  -webkit-font-smoothing: antialiased;
-
-  /* FUNDAL NEUTRU – FĂRĂ LUMINĂ */
-  background: linear-gradient(180deg, #070a0f 0%, #0a0e15 100%);
 }
 
 
@@ -114,7 +105,6 @@ header nav ul{
 
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   gap: 22px;
 
   flex-wrap: wrap;            /* cerința ta: OK pe 2 rânduri */
@@ -200,12 +190,11 @@ header nav ul li:last-child{
 
 /* eyebrow */
 #hero .eyebrow{
-  margin: 0 0 14px;
+  margin: 0 0 10px;
   max-width: var(--max);
   margin-left: 0;
   margin-right: auto;
   text-align: left;
-  margin-bottom: 10px;
   font-size: 12px;
   letter-spacing: .22em;
   text-transform: uppercase;
@@ -885,9 +874,6 @@ header nav ul li:last-child{
   max-width: var(--max);
   margin: 0 auto;
   padding: 0 var(--pad);
-}
-
-#faq details{
   border-bottom: 1px solid rgba(255,255,255,.08);
   padding: 18px 0;
 }
@@ -963,9 +949,6 @@ footer p{
   text-align: center;
   font-size: 13px;
   color: rgba(255,255,255,.55);
-}
-
-footer p{
   letter-spacing: .2px;
 }
 
